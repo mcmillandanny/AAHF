@@ -8,3 +8,127 @@
 body {
 	background: #fff;
 }
+
+a {
+	text-decoration: none;
+}
+
+
+//Side Nav / Header Styles
+
+header {
+	height: 90px;
+	margin-bottom: 20px;
+
+	.headerLogo {
+		display: none;
+	}
+
+	.flexHeaderImg {
+		display: flex;
+		flex-direction: row;
+		.headerLogoMobile {
+			padding: 20px;
+	
+		}
+	
+		.hamburger {
+			padding: 20px;
+			text-align: right;
+			width: 80%;
+
+			img {
+				max-width: 30px;
+			}
+		}
+	}
+
+	.overlayNavMobile {
+		display: none;
+		position: fixed;
+		top: 0%;
+		left: -500px;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		background: #ccc;
+
+		.flexOverlayHeader {
+			display: flex;
+
+			.headerLogoMobile {
+				border: 1px solid yellow;
+				text-align: left;
+			}
+	
+			.closeBtn {
+				padding: 20px;
+				text-align: right;
+	
+				img {
+					width: 15%;
+				}
+			}
+		}
+
+		.dlBtn {
+			text-align: center;
+
+			img {
+				border: 1px solid red;
+			}
+
+		}
+
+		ul {
+			text-align: center;
+			padding: 20px;
+
+			li {
+				margin: 25px;
+			}
+		}
+	}
+
+	.sideNavDesktop {
+		display: none;
+	}
+}
+
+
+
+//Main Content Styles
+
+.content {
+	padding: 20px;
+
+	h2 {
+		color: #86bc2c;
+		margin: 10px 0px;
+		font-size: 1.2rem;
+	}
+
+	p {
+		color: grey;
+		line-height: 1.2;
+		margin: 15px 0px;
+	}
+
+	.col-2 {
+		width: 100%;
+
+		.flexWrapBoardMembers {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		
+			.boardMembers {
+				width: 50%;
+				border: 1px solid red;
+				p {
+					margin: 0px;
+				}
+			}
+		}
+	}
+}
