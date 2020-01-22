@@ -7,11 +7,18 @@
 
 body {
 	background: #fff;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
 
 a {
 	text-decoration: none;
 }
+
+//Color variable
+
+$accentGreen: #76BC21;
+$bodyTextColor: #808285;
 
 
 //Side Nav / Header Styles
@@ -29,6 +36,11 @@ header {
 		flex-direction: row;
 		.headerLogoMobile {
 			padding: 20px;
+
+			img {
+				// width: 50%;
+				max-width: 100px;
+			}
 	
 		}
 	
@@ -55,10 +67,15 @@ header {
 
 		.flexOverlayHeader {
 			display: flex;
+			justify-content: space-around;
 
 			.headerLogoMobile {
-				border: 1px solid yellow;
 				text-align: left;
+				padding: 20px;
+
+				img {
+					max-width: 100px;
+				}
 			}
 	
 			.closeBtn {
@@ -66,7 +83,9 @@ header {
 				text-align: right;
 	
 				img {
-					width: 15%;
+					width: 8%;
+					// width: 20px;
+					// max-width: 20px;
 				}
 			}
 		}
@@ -75,7 +94,14 @@ header {
 			text-align: center;
 
 			img {
-				border: 1px solid red;
+				max-width: 50px;
+			}
+
+			span {
+				display: block;
+				color: white;
+				text-align: center;
+				margin-top: 5px;
 			}
 
 		}
@@ -86,6 +112,14 @@ header {
 
 			li {
 				margin: 25px;
+			}
+
+			a {
+				color: white;
+			}
+
+			a:hover {
+				color: $accentGreen;
 			}
 		}
 	}
@@ -101,15 +135,20 @@ header {
 
 .content {
 	padding: 20px;
+	margin: 40px 0px;
 
 	h2 {
-		color: #86bc2c;
+		color: $accentGreen;
 		margin: 10px 0px;
 		font-size: 1.2rem;
 	}
 
+	h3 {
+		color: $accentGreen;
+	}
+
 	p {
-		color: grey;
+		color: $bodyTextColor;
 		line-height: 1.2;
 		margin: 15px 0px;
 	}
@@ -124,11 +163,211 @@ header {
 		
 			.boardMembers {
 				width: 50%;
-				border: 1px solid red;
+				
 				p {
-					margin: 0px;
+					margin: 5px 0px;
+				}
+			}
+
+			.boardMembers p:nth-child(even) {
+				color: #ccc;
+			}
+		}
+	}
+
+	.needSection {
+		margin: 50px 0px;
+
+		.needTilesWrap {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			text-align: center;
+
+			.needTiles {
+				width: 48%;
+				margin-right: 2%;
+				margin-bottom: 2%;
+				background: $accentGreen;
+
+				p {
+					font-size: .7rem;
+					color: white;
+					height: 30px;
+					font-weight: bold;
+					width: 70%;
+					margin: 12px auto;
+				}
+
+				span {
+					display: block;
+					font-size: .6rem;
+					color: white;
+					height: 30px;
+					text-align: center;
+					margin: 12px auto;
+					width: 75%;
+					line-height: 1.2;
+				}
+
+				img {
+					width: 60%;
+					margin: 10px 0px;
+				}
+
+				.img3Tile{
+					width: 25%;
+				}
+
+				.img2Tile {
+					width: 40%
+				}
+
+				.img6Tile {
+					width: 40%;
+				}
+			}
+
+			.tile3 {
+				& p {
+					width: 50%;
+				}
+			}
+
+			.tile4 {
+				& p {
+					width: 80%;
+				}
+			}
+
+			.tile5 {
+				& p {
+					width: 80%;
+				}
+			}
+
+		}
+	}
+
+	.objSection {
+		margin: 50px 0px;
+
+		.objTilesWrap {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			text-align: center;
+			position: relative;
+			
+			.objTiles {
+				height: 160px;
+				width: 48%;
+				margin-right: 2%;
+				margin-bottom: 2%;
+				background: $accentGreen;
+	
+
+				p {
+					font-size: .9rem;
+					color: white;
+					width: 80%;
+					margin: auto;
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+					
 				}
 			}
 		}
 	}
+
+	.goalsSection {
+		margin: 50px 0px;
+		.goalTilesWrap {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			text-align: center;
+			position: relative;
+
+			.goalTiles {
+				height: 160px;
+				width: 48%;
+				margin-right: 2%;
+				margin-bottom: 2%;
+				background: $accentGreen;
+			}
+
+			span {
+				font-size: 1.4rem;
+			}
+
+			 p {
+				font-size: .8rem;
+				color: white;
+				width: 90%;
+
+				margin: auto;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			 }
+		}
+	}
+
+	.contactSection {
+		
+		form {
+			display: flex;
+			flex-direction: column;
+
+			input {
+				widows: 48%;
+			}
+		}
+	}
 }
+
+
+
+//Media Queries
+
+@media only screen and (min-width: 512px) {
+
+	.content {
+		.needSection {
+			.needTilesWrap {
+				.needTiles {
+					p {
+						font-size: .8rem;
+					}
+					span {
+						font-size: .7rem;
+					}
+				}
+			}
+		}
+
+		.goalsSection {
+			.goalTilesWrap {
+				p {
+					font-size: .9rem;
+				}
+			}
+		}
+	}
+
+  }
+
+  @media only screen and (min-width: 700px) {
+
+	.content {
+		.needSection {
+			.needTilesWrap {
+				.needTiles {
+					width: 31%;
+					}
+				}
+			}
+		}	
+  }

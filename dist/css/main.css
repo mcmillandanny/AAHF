@@ -58,6 +58,7 @@ table {
 
 body {
 	background: #fff;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -85,6 +86,10 @@ header .flexHeaderImg .headerLogoMobile {
 	padding: 20px;
 }
 
+header .flexHeaderImg .headerLogoMobile img {
+	max-width: 100px;
+}
+
 header .flexHeaderImg .hamburger {
 	padding: 20px;
 	text-align: right;
@@ -109,11 +114,16 @@ header .overlayNavMobile {
 header .overlayNavMobile .flexOverlayHeader {
 	display: -webkit-box;
 	display: flex;
+	justify-content: space-around;
 }
 
 header .overlayNavMobile .flexOverlayHeader .headerLogoMobile {
-	border: 1px solid yellow;
 	text-align: left;
+	padding: 20px;
+}
+
+header .overlayNavMobile .flexOverlayHeader .headerLogoMobile img {
+	max-width: 100px;
 }
 
 header .overlayNavMobile .flexOverlayHeader .closeBtn {
@@ -122,7 +132,7 @@ header .overlayNavMobile .flexOverlayHeader .closeBtn {
 }
 
 header .overlayNavMobile .flexOverlayHeader .closeBtn img {
-	width: 15%;
+	width: 8%;
 }
 
 header .overlayNavMobile .dlBtn {
@@ -130,7 +140,14 @@ header .overlayNavMobile .dlBtn {
 }
 
 header .overlayNavMobile .dlBtn img {
-	border: 1px solid red;
+	max-width: 50px;
+}
+
+header .overlayNavMobile .dlBtn span {
+	display: block;
+	color: white;
+	text-align: center;
+	margin-top: 5px;
 }
 
 header .overlayNavMobile ul {
@@ -142,22 +159,35 @@ header .overlayNavMobile ul li {
 	margin: 25px;
 }
 
+header .overlayNavMobile ul a {
+	color: white;
+}
+
+header .overlayNavMobile ul a:hover {
+	color: #76BC21;
+}
+
 header .sideNavDesktop {
 	display: none;
 }
 
 .content {
 	padding: 20px;
+	margin: 40px 0px;
 }
 
 .content h2 {
-	color: #86bc2c;
+	color: #76BC21;
 	margin: 10px 0px;
 	font-size: 1.2rem;
 }
 
+.content h3 {
+	color: #76BC21;
+}
+
 .content p {
-	color: grey;
+	color: #808285;
 	line-height: 1.2;
 	margin: 15px 0px;
 }
@@ -177,11 +207,186 @@ header .sideNavDesktop {
 
 .content .col-2 .flexWrapBoardMembers .boardMembers {
 	width: 50%;
-	border: 1px solid red;
 }
 
 .content .col-2 .flexWrapBoardMembers .boardMembers p {
-	margin: 0px;
+	margin: 5px 0px;
+}
+
+.content .col-2 .flexWrapBoardMembers .boardMembers p:nth-child(even) {
+	color: #ccc;
+}
+
+.content .needSection {
+	margin: 50px 0px;
+}
+
+.content .needSection .needTilesWrap {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	text-align: center;
+}
+
+.content .needSection .needTilesWrap .needTiles {
+	width: 48%;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	background: #76BC21;
+}
+
+.content .needSection .needTilesWrap .needTiles p {
+	font-size: .7rem;
+	color: white;
+	height: 30px;
+	font-weight: bold;
+	width: 70%;
+	margin: 12px auto;
+}
+
+.content .needSection .needTilesWrap .needTiles span {
+	display: block;
+	font-size: .6rem;
+	color: white;
+	height: 30px;
+	text-align: center;
+	margin: 12px auto;
+	width: 75%;
+	line-height: 1.2;
+}
+
+.content .needSection .needTilesWrap .needTiles img {
+	width: 60%;
+	margin: 10px 0px;
+}
+
+.content .needSection .needTilesWrap .needTiles .img3Tile {
+	width: 25%;
+}
+
+.content .needSection .needTilesWrap .needTiles .img2Tile {
+	width: 40%;
+}
+
+.content .needSection .needTilesWrap .needTiles .img6Tile {
+	width: 40%;
+}
+
+.content .needSection .needTilesWrap .tile3 p {
+	width: 50%;
+}
+
+.content .needSection .needTilesWrap .tile4 p {
+	width: 80%;
+}
+
+.content .needSection .needTilesWrap .tile5 p {
+	width: 80%;
+}
+
+.content .objSection {
+	margin: 50px 0px;
+}
+
+.content .objSection .objTilesWrap {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	text-align: center;
+	position: relative;
+}
+
+.content .objSection .objTilesWrap .objTiles {
+	height: 160px;
+	width: 48%;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	background: #76BC21;
+}
+
+.content .objSection .objTilesWrap .objTiles p {
+	font-size: .9rem;
+	color: white;
+	width: 80%;
+	margin: auto;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.content .goalsSection {
+	margin: 50px 0px;
+}
+
+.content .goalsSection .goalTilesWrap {
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	text-align: center;
+	position: relative;
+}
+
+.content .goalsSection .goalTilesWrap .goalTiles {
+	height: 160px;
+	width: 48%;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	background: #76BC21;
+}
+
+.content .goalsSection .goalTilesWrap span {
+	font-size: 1.4rem;
+}
+
+.content .goalsSection .goalTilesWrap p {
+	font-size: .8rem;
+	color: white;
+	width: 90%;
+	margin: auto;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.content .contactSection form {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+.content .contactSection form input {
+	widows: 48%;
+}
+
+@media only screen and (min-width: 512px) {
+	.content .needSection .needTilesWrap .needTiles p {
+		font-size: .8rem;
+	}
+	.content .needSection .needTilesWrap .needTiles span {
+		font-size: .7rem;
+	}
+	.content .goalsSection .goalTilesWrap p {
+		font-size: .9rem;
+	}
+}
+
+@media only screen and (min-width: 700px) {
+	.content .needSection .needTilesWrap .needTiles {
+		width: 31%;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */

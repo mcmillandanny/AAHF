@@ -26,7 +26,7 @@ hamburgerBtn.addEventListener("click", () => {
 closeNavBtn.addEventListener("click", () => {
     TweenMax.to(overlayMobile, {
         display: "none",
-        left: "-500px",
+        left: "-1000px",
         duration: .3,
         ease: "ease-in"
     })
