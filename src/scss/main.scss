@@ -124,14 +124,16 @@ header {
 		}
 	}
 
-	.sideNavDesktop {
-		display: none;
-	}
 }
 
 
 
 //Main Content Styles
+
+
+.sideNavDesktop {
+	display: none;
+}
 
 .content {
 	padding: 20px;
@@ -167,6 +169,10 @@ header {
 				p {
 					margin: 5px 0px;
 				}
+			}
+
+			.greenTextExec {
+				color: $accentGreen;
 			}
 
 			.boardMembers p:nth-child(even) {
@@ -331,7 +337,7 @@ header {
 
 
 //Media Queries
-
+// Mobile View
 @media only screen and (min-width: 512px) {
 
 	.content {
@@ -369,5 +375,129 @@ header {
 					}
 				}
 			}
+
+			.objSection .objTilesWrap .objTiles {
+				width: 31%;
+			}
+
+			.goalsSection .goalTilesWrap .goalTiles {
+				width: 31%;
+			}
+
 		}	
   }
+
+// Tablet View
+@media only screen and (min-width: 768px) {
+
+	.content {
+		p {
+			font-size: .9rem;	
+		}
+		h2 {
+			font-size: 1rem;
+		}
+		.aboutSection {
+			display: flex;
+			justify-content: flex-start;
+
+
+			.col-2 {
+				margin-top: 40px;
+				h2 {
+					width: 58%;
+					margin: auto;
+					margin-bottom: 5px;
+
+				}
+				.flexWrapBoardMembers {
+					.boardMembers {
+						width: 58%;
+						margin: auto;
+					}
+
+					.greenTextExec {
+						font-size: .8rem;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+
+//Desktop View
+
+@media only screen and (min-width: 960px) {
+
+	.navContentWrap {
+		max-width: 1000px;
+		margin: auto;
+	}
+
+	header {
+		height: 0px;
+
+		.flexHeaderImg {
+			display: none;
+		}
+	}
+
+	.content {
+		margin: auto;
+		width: 720px;
+		float: right;
+		max-width: 720px;
+	}
+
+	.sideNavDesktop {
+		// left: 0;
+		width: 220px;
+		height: 100vh;
+		float: left;
+		max-width: 220px;
+		background: $bodyTextColor;
+		top: 0;
+		margin: auto;
+		position: fixed;
+		display: block;
+
+		.headerLogo {
+			display: block;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		ul {
+			font-family: Arial, Helvetica, sans-serif;
+			width: 50%;
+			margin: 10px auto;
+
+			a {
+				color: white;
+			}
+			li {
+				padding: 8px 0px;
+			}
+		}
+
+		.dlBtn {
+			position: relative;
+			width: 35%;
+			top: 15%;
+			margin: auto;
+			img {
+				width: 100%;
+			}
+			p {
+				width: 100%;
+				font-size: .5rem;
+				text-align: center;
+				padding: 5px;
+			}
+		}
+	}
+}

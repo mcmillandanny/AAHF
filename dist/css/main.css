@@ -167,7 +167,7 @@ header .overlayNavMobile ul a:hover {
 	color: #76BC21;
 }
 
-header .sideNavDesktop {
+.sideNavDesktop {
 	display: none;
 }
 
@@ -211,6 +211,10 @@ header .sideNavDesktop {
 
 .content .col-2 .flexWrapBoardMembers .boardMembers p {
 	margin: 5px 0px;
+}
+
+.content .col-2 .flexWrapBoardMembers .greenTextExec {
+	color: #76BC21;
 }
 
 .content .col-2 .flexWrapBoardMembers .boardMembers p:nth-child(even) {
@@ -386,6 +390,104 @@ header .sideNavDesktop {
 @media only screen and (min-width: 700px) {
 	.content .needSection .needTilesWrap .needTiles {
 		width: 31%;
+	}
+	.content .objSection .objTilesWrap .objTiles {
+		width: 31%;
+	}
+	.content .goalsSection .goalTilesWrap .goalTiles {
+		width: 31%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.content p {
+		font-size: .9rem;
+	}
+	.content h2 {
+		font-size: 1rem;
+	}
+	.content .aboutSection {
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: start;
+		        justify-content: flex-start;
+	}
+	.content .aboutSection .col-2 {
+		margin-top: 40px;
+	}
+	.content .aboutSection .col-2 h2 {
+		width: 58%;
+		margin: auto;
+		margin-bottom: 5px;
+	}
+	.content .aboutSection .col-2 .flexWrapBoardMembers .boardMembers {
+		width: 58%;
+		margin: auto;
+	}
+	.content .aboutSection .col-2 .flexWrapBoardMembers .greenTextExec {
+		font-size: .8rem;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.navContentWrap {
+		max-width: 1000px;
+		margin: auto;
+	}
+	header {
+		height: 0px;
+	}
+	header .flexHeaderImg {
+		display: none;
+	}
+	.content {
+		margin: auto;
+		width: 720px;
+		float: right;
+		max-width: 720px;
+	}
+	.sideNavDesktop {
+		width: 220px;
+		height: 100vh;
+		float: left;
+		max-width: 220px;
+		background: #808285;
+		top: 0;
+		margin: auto;
+		position: fixed;
+		display: block;
+	}
+	.sideNavDesktop .headerLogo {
+		display: block;
+	}
+	.sideNavDesktop .headerLogo img {
+		width: 100%;
+	}
+	.sideNavDesktop ul {
+		font-family: Arial, Helvetica, sans-serif;
+		width: 50%;
+		margin: 10px auto;
+	}
+	.sideNavDesktop ul a {
+		color: white;
+	}
+	.sideNavDesktop ul li {
+		padding: 8px 0px;
+	}
+	.sideNavDesktop .dlBtn {
+		position: relative;
+		width: 35%;
+		top: 15%;
+		margin: auto;
+	}
+	.sideNavDesktop .dlBtn img {
+		width: 100%;
+	}
+	.sideNavDesktop .dlBtn p {
+		width: 100%;
+		font-size: .5rem;
+		text-align: center;
+		padding: 5px;
 	}
 }
 
